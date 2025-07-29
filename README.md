@@ -3,8 +3,7 @@
 
 This repository contains all projects I'm building using the Elegoo UNO R3 Super Starter Kit.
 
-The goal is to learn the fundamentals of electronics, microcontrollers, and prototyping – and to build the foundation for creating real-world hardware systems and launching my own tech company in the future.
-
+The goal is to learn the fundamentals of electronics, microcontrollers, and prototyping – and to build the foundation for creating real-world hardware systems.
 Each project is documented with:
 - Circuit diagrams and breadboard photos
 - Arduino code
