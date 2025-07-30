@@ -16,7 +16,7 @@ This project uses an RGB LED to display multiple colors by controlling three ind
 
 ## 🖼️ Breadboard Image
 
-![RGB LED Circuit][IMG_0522](https://github.com/user-attachments/assets/ca207545-a232-420b-b53b-a9255513e530)
+[RGB LED Circuit][IMG_0522](https://github.com/user-attachments/assets/ca207545-a232-420b-b53b-a9255513e530)
 [RGB LED Circuit]![IMG_0522](https://github.com/user-attachments/assets/e7a570e5-a230-4231-926c-45e44cf79007)
 
 
