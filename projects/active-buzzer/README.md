@@ -1,31 +1,34 @@
-//www.elegoo.com
-//2016.12.08
+Active Buzzer Test – Lesson 6
+This project uses the Elegoo UNO R3 Super Starter Kit to control an active buzzer using a digital output pin.
 
-int buzzer = 12;//the pin of the active buzzer
-void setup()
-{
- pinMode(buzzer,OUTPUT);//initialize the buzzer pin as an output
-}
-void loop()
-{
- unsigned char i;
- while(1)
- {
-   //output an frequency
-   for(i=0;i<80;i++)
-   {
-    digitalWrite(buzzer,HIGH);
-    delay(1);//wait for 1ms
-    digitalWrite(buzzer,LOW);
-    delay(1);//wait for 1ms
-    }
-    //output another frequency
-     for(i=0;i<100;i++)
-      {
-        digitalWrite(buzzer,HIGH);
-        delay(2);//wait for 2ms
-        digitalWrite(buzzer,LOW);
-        delay(2);//wait for 2ms
-      }
-  }
-} 
+🔌 Circuit Overview
+Microcontroller: Arduino UNO R3
+
+Component: Active Buzzer (with built-in oscillator)
+
+Pin connection:
+
+Buzzer + → Digital Pin 8
+
+Buzzer - → GND
+
+Power source: 5V from Arduino
+
+🖼️ Breadboard Image
+(Insert an image of your buzzer circuit here)
+
+💡 What I Learned
+How to properly connect an active buzzer to Arduino.
+
+The importance of correct polarity (+ and -) for buzzers.
+
+How to control the buzzer using digital signals (HIGH/LOW).
+
+⚠️ Troubleshooting Experience
+At first, no sound came from the buzzer. The issue was:
+
+Polarity reversed: I had the + and - pins swapped.
+
+After correcting the wiring, the buzzer worked as expected.
+
+Lesson learned: Always double-check component polarity before powering the circuit.
