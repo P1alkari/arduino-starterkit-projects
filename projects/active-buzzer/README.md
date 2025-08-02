@@ -1,37 +1,50 @@
-🔊 Lesson 6 – Active Buzzer
-This project demonstrates how to control an active buzzer with a digital output on the Arduino UNO.
-The buzzer alternates between ON and OFF every second using digitalWrite().
+# 🔔 Lesson 6 – Active Buzzer
 
-🔌 Circuit Overview
-Microcontroller: Arduino UNO R3
+This project demonstrates how to drive an **active buzzer** using a digital output pin.  
+An active buzzer contains its own oscillator, so it only needs **HIGH/LOW** (no PWM/tone).
 
-Components:
+---
 
-1 × Active Buzzer
+## 🔌 Circuit Overview
 
-Buzzer + → Pin 8
+- **MCU:** Arduino UNO R3  
+- **Buzzer:** Active buzzer (2 pins: **+** and **–**)  
+- **Wiring (typical):**
+  - **Buzzer +** → **D8** (or any digital pin)
+  - **Buzzer –** → **GND**
+- *(Optional)* A small series resistor (e.g., 100–220 Ω) can limit current/harshness, but most kit buzzers work directly from a digital pin.
 
-Buzzer - → GND
+> If your module has **S / + / –** pins:  
+> **S** → D8, **+** → 5V, **–** → GND.  
+> If it only has **+ / –**: connect **+** to D8 and **–** to GND.
 
-🖼️ Wiring
-![Active Buzzer Circuit]
+---
 
-💻 Code
-See active-buzzer.ino
+## 🖼️ Wiring
 
-💡 What I Learned
-How to properly wire an active buzzer to Arduino
+![Active Buzzer Wiring](./wiring.jpg)
 
-Importance of correct polarity (buzzer won’t sound if + and - are swapped)
+---
 
-Using digitalWrite() to generate simple ON/OFF signals
+## 💻 Code
 
-Basic timing control with delay()
+See [`active-buzzer.ino`](./active-buzzer.ino) for a simple on/off beep pattern.
 
-✅ Notes
-Initially, no sound came from the buzzer because the polarity was reversed
+---
 
-After swapping the connections, the buzzer worked as expected
+## 💡 What I Learned
 
-For more complex tones, a passive buzzer and the tone() function would be needed
+- The difference between **active** and **passive** buzzers (active = digital on/off, passive = needs `tone()`/PWM).
+- Driving an output device with `digitalWrite(HIGH/LOW)`.
+- Checking pin polarity on the buzzer/module before powering.
+
+---
+
+## ⚠️ Troubleshooting Notes
+
+- **No sound:** I initially connected the wires to the **wrong pins/opposite side** of the buzzer, so it didn’t make any sound.  
+  Fix: Ensure **+** goes to the **signal pin (D8 or S)** and **–** to **GND** (or **+** to 5V if the module expects it, and **S** to D8).
+- If the buzzer is very quiet or harsh, try a small **series resistor** (100–220 Ω) or shorter duty cycle.
+
+
 
