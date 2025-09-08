@@ -24,4 +24,4 @@ To use this experience to develop more advanced systems with ESP32, IoT, and har
 
 ## 👤 About Me
 
-I'm an electronics engineering student at OsloMet, using this repository to document my journey from beginner to hardware developer and future founder.
+I'm an electronics engineering student at OsloMet, using this repository to document my journey.
